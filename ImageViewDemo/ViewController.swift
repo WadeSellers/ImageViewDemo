@@ -10,15 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var footballLogosImageView: UIImageView!
+    @IBOutlet weak var actionButton: UIButton!
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        titleLabel.text = "Da Bears"
+        footballLogosImageView.image = UIImage(named: "bears")
+
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func onActionButtonTapped(sender: AnyObject) {
+        titleLabel.text = "Cheeseheads"
+        footballLogosImageView.image = UIImage(named: "packers")
     }
+
+
+
 
 
 }
